@@ -8,4 +8,11 @@ metadata:
 spec:
   containers:
   - name: worker-app
-    image: kodekloud/examplevotingapp_worker:v1
+    image: dockersamples/examplevotingapp_worker
+    resources:
+      limits:
+        memory: "512Mi"
+        cpu: "500m"
+      requests:
+        memory: "256Mi"
+        cpu: "250m"
